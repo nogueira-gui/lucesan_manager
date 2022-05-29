@@ -8,8 +8,8 @@ public class CampaignConverterInbound {
         Campaign campaign = new Campaign();
         campaign.setCode(request.getCode());
         campaign.setDescription(request.getDescription());
-        campaign.setActive(request.isActive());
-        campaign.setImageUrl(request.getImageUrl());
+        campaign.setActive(true);
+        campaign.setImageUrl(request.getImage());
         campaign.setPriceCut(request.getPriceCut());
         return campaign;
     }

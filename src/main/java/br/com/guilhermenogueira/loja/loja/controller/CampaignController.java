@@ -20,9 +20,11 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import static java.util.Objects.isNull;
+
 @RestController
 @RequestMapping(path = "v1/campaign")
-@CrossOrigin(origins = {"http://localhost:4200","https://lucesan-manager-angular-h6y75e80k-nogueira-gui.vercel.app","https://lucesan-manager-angular.vercel.app"})
+@CrossOrigin(origins = {"http://localhost:4200", "https://lucesan-manager-angular-h6y75e80k-nogueira-gui.vercel.app", "https://lucesan-manager-angular.vercel.app"})
 public class CampaignController {
     private final CampaignService campaignService;
     private final ImageService imageService;

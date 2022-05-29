@@ -5,7 +5,7 @@ public class CampaignRequest {
     private String description;
     private Double priceCut;
     private Boolean active;
-    private String imageUrl;
+    private String image;
 
     public String getCode() {
         return code;
@@ -39,11 +39,11 @@ public class CampaignRequest {
         this.active = active;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImage() {
+        return image;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImage(String image) {
+        this.image = image;
     }
 }
