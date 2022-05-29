@@ -22,7 +22,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(path = "v1/campaign")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200","https://lucesan-manager-angular-4q7v4rccm-nogueira-gui.vercel.app/"})
 public class CampaignController {
     private final CampaignService campaignService;
     private final ImageService imageService;
