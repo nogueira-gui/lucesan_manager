@@ -22,7 +22,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(path="v1/category")
-@CrossOrigin(origins = {"http://localhost:4200","https://lucesan-manager-angular-4q7v4rccm-nogueira-gui.vercel.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://lucesan-manager-angular-h6y75e80k-nogueira-gui.vercel.app","https://lucesan-manager-angular.vercel.app"})
 public class CategoryController {
     private final CategoryService categoryService;
     private final ImageService imageService;
