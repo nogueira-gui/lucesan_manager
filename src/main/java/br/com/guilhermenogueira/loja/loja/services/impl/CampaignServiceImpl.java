@@ -18,8 +18,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static java.util.Objects.isNull;
-
 @Service
 public class CampaignServiceImpl implements CampaignService {
     @Autowired
@@ -78,12 +76,12 @@ public class CampaignServiceImpl implements CampaignService {
         Campaign request = new Campaign();
         campaign.ifPresent(value -> {
             request.setDescription(value.getDescription());
-            request.setCode(value.getCode());
+            request.setName(value.getName());
             request.setImageUrl(value.getImageUrl());
             request.setActive(false);
             request.setId(value.getId());
         });
-        if (request.getCode() == null || request.getDescription() == null) {
+        if (request.getName() == null || request.getDescription() == null) {
             return null;
         }
         return CampaignConverterOutbound.converter(campaignRepository.save(request));
