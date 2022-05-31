@@ -24,7 +24,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(path = "v1/product")
-@CrossOrigin(origins = {"http://localhost:4200","https://lucesan-manager-angular-h6y75e80k-nogueira-gui.vercel.app","https://lucesan-manager-angular.vercel.app"})
+@CrossOrigin(origins = {"http://localhost:4200","https://lucesan-manager-angular.vercel.app/**"})
 public class ProductController {
 
     private final ProductService productService;
