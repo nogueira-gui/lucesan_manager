@@ -1,7 +1,6 @@
 package br.com.guilhermenogueira.loja.loja.parameters;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 public class ProductRequest {
     private String name;
@@ -11,6 +10,8 @@ public class ProductRequest {
     private Boolean available;
     private String category;
     private String subCategory;
+    private Long campaignId;
+    private String campaign;
     private BigDecimal price;
     private Long quantity;
 
@@ -60,6 +61,22 @@ public class ProductRequest {
 
     public String getSubCategory() {
         return subCategory;
+    }
+
+    public Long getCampaignId() {
+        return campaignId;
+    }
+
+    public void setCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
+    }
+
+    public String getCampaign() {
+        return campaign;
+    }
+
+    public void setCampaign(String campaign) {
+        this.campaign = campaign;
     }
 
     public Boolean isAvailable() {

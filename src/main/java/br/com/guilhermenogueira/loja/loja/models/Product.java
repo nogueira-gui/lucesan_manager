@@ -24,6 +24,8 @@ public class Product {
     private Boolean highlighted;
     private String category;
     private String subCategory;
+    private Long campaignId;
+    private String campaign;
     private BigDecimal price;
     private Long quantity;
     private Boolean available;
@@ -108,6 +110,22 @@ public class Product {
 
     public void setSubCategory(String subCategory) {
         this.subCategory = subCategory;
+    }
+
+    public Long getCampaignId() {
+        return campaignId;
+    }
+
+    public void setCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
+    }
+
+    public String getCampaign() {
+        return campaign;
+    }
+
+    public void setCampaign(String campaign) {
+        this.campaign = campaign;
     }
 
     public BigDecimal getPrice() {

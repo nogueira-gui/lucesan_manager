@@ -16,6 +16,8 @@ public class ProductConverterInbound {
         product.setImageUrl(request.getImages());
         product.setName(request.getName());
         product.setSubCategory(request.getSubCategory());
+        product.setCampaign(request.getCampaign());
+        product.setCampaignId(request.getCampaignId());
         product.setPrice(request.getPrice());
         product.setQuantity(request.getQuantity());
         return product;

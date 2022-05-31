@@ -16,6 +16,8 @@ public class ProductPresenter {
     private final Boolean highlighted;
     private final String category;
     private final String subCategory;
+    private final Long campaignId;
+    private final String campaign;
     private final BigDecimal price;
     private final Long quantity;
 
@@ -31,6 +33,8 @@ public class ProductPresenter {
         this.price = productResponse.getPrice();
         this.quantity = productResponse.getQuantity();
         this.available = productResponse.isAvailable();
+        this.campaign = productResponse.getCampaign();
+        this.campaignId = productResponse.getCampaignId();
     }
     public ProductPresenter(Product productResponse, ImageCloudPresenter image) {
         this.id = productResponse.getId();
@@ -44,6 +48,8 @@ public class ProductPresenter {
         this.price = productResponse.getPrice();
         this.quantity = productResponse.getQuantity();
         this.available = productResponse.isAvailable();
+        this.campaign = productResponse.getCampaign();
+        this.campaignId = productResponse.getCampaignId();
     }
 
     public Long getId() {
@@ -88,5 +94,13 @@ public class ProductPresenter {
 
     public Boolean getAvailable() {
         return available;
+    }
+
+    public Long getCampaignId() {
+        return campaignId;
+    }
+
+    public String getCampaign() {
+        return campaign;
     }
 }
