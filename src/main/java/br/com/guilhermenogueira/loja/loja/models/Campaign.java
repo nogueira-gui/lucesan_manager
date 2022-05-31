@@ -17,9 +17,8 @@ public class Campaign {
             generator = "campaign_sequence"
     )
     private Long id;
-    private String code;
+    private String name;
     private String description;
-    private Double priceCut;
     private Boolean active;
     private String imageUrl;
 
@@ -27,11 +26,10 @@ public class Campaign {
         //emptyArgs
     }
 
-    public Campaign(Long id, String code, String description, Double priceCut, Boolean active, String imageUrl) {
+    public Campaign(Long id, String name, String description, Boolean active, String imageUrl) {
         this.id = id;
-        this.code = code;
+        this.name = name;
         this.description = description;
-        this.priceCut = priceCut;
         this.active = active;
         this.imageUrl = imageUrl;
     }
@@ -44,12 +42,12 @@ public class Campaign {
         this.id = id;
     }
 
-    public String getCode() {
-        return code;
+    public String getName() {
+        return name;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -58,14 +56,6 @@ public class Campaign {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Double getPriceCut() {
-        return priceCut;
-    }
-
-    public void setPriceCut(Double priceCut) {
-        this.priceCut = priceCut;
     }
 
     public Boolean isActive() {

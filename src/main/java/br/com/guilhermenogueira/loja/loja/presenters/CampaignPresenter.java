@@ -4,17 +4,15 @@ import br.com.guilhermenogueira.loja.loja.models.Campaign;
 
 public class CampaignPresenter {
     private final Long id;
-    private final String code;
+    private final String name;
     private final String description;
-    private final Double priceCut;
     private final Boolean active;
     private final ImageCloudPresenter image;
 
     public CampaignPresenter(Campaign campaign, ImageCloudPresenter image) {
         this.id = campaign.getId();
-        this.code = campaign.getCode();
+        this.name = campaign.getName();
         this.description = campaign.getDescription();
-        this.priceCut = campaign.getPriceCut();
         this.active = campaign.isActive();
         this.image = image;
     }
@@ -23,16 +21,12 @@ public class CampaignPresenter {
         return id;
     }
 
-    public String getCode() {
-        return code;
+    public String getName() {
+        return name;
     }
 
     public String getDescription() {
         return description;
-    }
-
-    public Double getPriceCut() {
-        return priceCut;
     }
 
     public Boolean isActive() {

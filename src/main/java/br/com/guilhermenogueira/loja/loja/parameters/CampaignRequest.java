@@ -1,18 +1,17 @@
 package br.com.guilhermenogueira.loja.loja.parameters;
 
 public class CampaignRequest {
-    private String code;
+    private String name;
     private String description;
-    private Double priceCut;
     private Boolean active;
     private String image;
 
-    public String getCode() {
-        return code;
+    public String getName() {
+        return name;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -21,14 +20,6 @@ public class CampaignRequest {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Double getPriceCut() {
-        return priceCut;
-    }
-
-    public void setPriceCut(Double priceCut) {
-        this.priceCut = priceCut;
     }
 
     public Boolean isActive() {
@@ -46,4 +37,5 @@ public class CampaignRequest {
     public void setImage(String image) {
         this.image = image;
     }
+
 }
