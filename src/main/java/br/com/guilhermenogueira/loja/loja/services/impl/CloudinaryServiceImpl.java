@@ -43,9 +43,13 @@ public class CloudinaryServiceImpl implements CloudinaryService {
 
     private File convert(MultipartFile multipartFile) throws IOException {
         File file = new File(multipartFile.getOriginalFilename());
-        FileOutputStream fo = new FileOutputStream(file);
-        fo.write(multipartFile.getBytes());
-        fo.close();
+        try {
+            FileOutputStream fo = new FileOutputStream(file);
+            fo.write(multipartFile.getBytes());
+            fo.close();
+        } catch (IOException e) {
+            System.out.print(e.getMessage());
+        }
         return file;
     }
 }
